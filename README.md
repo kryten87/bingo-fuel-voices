@@ -1,6 +1,6 @@
 # Bingo Fuel voices
 
-Voice models for the spoken radio in [Bingo Fuel](https://github.com/kryten87). The game downloads them itself
+Voice models for the spoken radio in Bingo Fuel, an air-war campaign game. The game downloads them itself
 when a player first turns RADIO VOICE on, and checks each archive's sha256 before unpacking it.
 
 Each release is a voice set. The game names the set it was built with, so a release is never changed once
@@ -19,8 +19,8 @@ About 88 MB in all.
 ## What they are
 
 Piper voices by Bryce Beattie (kristin, cori and john, medium quality), trained on public-domain LibriVox
-recordings, from [rhasspy/piper-voices](https://huggingface.co/rhasspy/piper-voices) (MIT licence). They are
-converted to float16, with fixes so they load and run reliably in [sherpa-onnx](https://github.com/k2-fsa/sherpa-onnx).
+recordings. They are converted to float16, with fixes so they load and run reliably in
+[sherpa-onnx](https://github.com/k2-fsa/sherpa-onnx).
 
 Each archive holds one folder:
 
@@ -30,3 +30,22 @@ Each archive holds one folder:
 - `SOURCE.txt`, the exact upstream file and revision it was converted from.
 
 They contain no espeak-ng data. The game sends the voices phonemes it works out itself.
+
+## Licence: public domain
+
+Our float16 conversions and this repository are dedicated to the public domain under
+[CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) (see `LICENSE`). Use them for anything, with or
+without credit.
+
+The voices they are made from are public domain too. Credit for them goes to their sources:
+
+- **The voices:** kristin, cori and john by [Bryce Beattie](https://brycebeattie.com/files/tts/), who releases them
+  as public domain.
+- **The recordings** they were trained on: volunteers' readings from [LibriVox](https://librivox.org), which are
+  public domain.
+- **Where we got them:** [rhasspy/piper-voices](https://huggingface.co/rhasspy/piper-voices), the voice
+  collection for the [Piper](https://github.com/rhasspy/piper) text-to-speech system, tagged MIT. Each archive's
+  `SOURCE.txt` names the exact file, revision and sha256 it was converted from, and `MODEL_CARD` is that voice's
+  card from there.
+
+The originals are available, unchanged, from both of those pages.
